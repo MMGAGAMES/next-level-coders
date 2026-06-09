@@ -1,0 +1,194 @@
+body{
+    margin:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#0b1020;
+    color:white;
+    overflow:hidden;
+}
+
+.tela-inicial,
+.final{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h1{
+    font-size:48px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.entrar{
+    background:#0078d7;
+    color:white;
+}
+
+.popup{
+    position:absolute;
+    width:320px;
+    background:#f2f2f2;
+    color:black;
+    border:1px solid #666;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+
+    animation:
+        aparecer 0.3s ease,
+        tremer 0.15s infinite alternate;
+
+    padding:0;
+}
+
+.janela-topo{
+    background:linear-gradient(
+        to bottom,
+        #0078d7,
+        #005fa8
+    );
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 0 0 12px;
+    font-weight:bold;
+    cursor:move;
+    height:32px;
+}
+
+.fechar{
+    width:46px;
+    height:32px;
+
+    border:none;
+    border-radius:0;
+
+    background:transparent;
+    color:white;
+
+    font-size:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+    padding:0;
+}
+
+.fechar:hover{
+    background:#e81123;
+}
+
+.janela-conteudo{
+    padding:15px;
+}
+
+.alerta{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.icone-alerta{
+    font-size:34px;
+}
+
+.janela-conteudo button{
+    background:#0078d7;
+    color:white;
+}
+
+.popup-principal{
+    width:450px;
+    z-index:999;
+
+    animation:
+        aparecer 0.3s ease,
+        piscar 0.5s infinite;
+}
+
+.popup-principal .janela-topo{
+    background:linear-gradient(
+        to bottom,
+        #ff8c00,
+        #e76f00
+    );
+}
+
+.escuro{
+    background:black;
+}
+
+.mensagem-final{
+    color:red;
+}
+
+.texto-final{
+    max-width:700px;
+    font-size:22px;
+}
+
+ul{
+    font-size:20px;
+    text-align:left;
+}
+
+@keyframes tremer{
+
+    0%{
+        transform:translateX(-2px);
+    }
+
+    100%{
+        transform:translateX(2px);
+    }
+
+}
+
+@keyframes aparecer{
+
+    0%{
+        opacity:0;
+        transform:scale(0.8);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+@keyframes piscar{
+
+    0%{
+        box-shadow:0 0 10px orange;
+    }
+
+    50%{
+        box-shadow:0 0 35px orange;
+    }
+
+    100%{
+        box-shadow:0 0 10px orange;
+    }
+
+}
+
+.final button{
+    background:#0078d7;
+    color:white;
+}

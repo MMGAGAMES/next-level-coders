@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tela-inicial" id="inicio">
+        <h1>Você realmente sabe se proteger na internet?</h1>
+
+        <button class="entrar" onclick="iniciarExperiencia()">
+            Entrar na experiência
+        </button>
+    </div>
+
+    <div id="popups"></div>
+
+    <div class="final" id="final" style="display:none;">
+
+        <h1 class="mensagem-final">
+            PARABÉNS... você caiu.
+        </h1>
+
+        <p class="texto-final">
+            Se isso fosse um golpe real, seus dados poderiam ter sido roubados,
+            suas contas comprometidas ou seu computador infectado.
+        </p>
+
+        <ul>
+            <li>Nunca clique sem verificar.</li>
+            <li>Desconfie de mensagens urgentes.</li>
+            <li>Golpistas usam medo e pressão.</li>
+            <li>Segurança digital é responsabilidade de todos.</li>
+        </ul>
+
+        <button onclick="window.location.href='seguranca.html'">
+            Aprender sobre Segurança Digital
+        </button>
+
+    </div>
+
+    <audio id="erro">
+        <source src="erro.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
